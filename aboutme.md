@@ -1,5 +1,5 @@
-<p align="center">
-À PROPOS DE MOI
+<p align="left">
+>> aboutme.mď
 </p>
 <br/>
 
