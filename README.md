@@ -15,8 +15,8 @@
 ### 👨‍💻 About Me
 
 ```typescript
-  PSEUDO       : "The MadDoG.tmdg",
-  RÔLE         : "OpsRensGCP",
+  PSEUDO       : "The MadDoG.tmdg"
+  RÔLE         : "OpsRensGCP"
   SPÉCIALITÉ   : "ComRens"
 ```
 
