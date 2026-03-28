@@ -40,20 +40,7 @@ const ankur = {
 <tr>
 <td valign="top" width="50%">
 
-### 🔭 Currently
-- 🏢 **SWE Intern** at **KlimaShift** — data orchestration with Prefect
-- 🔄 Backend refactoring & Vue.js / Nuxt.js frontend work
-- 🚀 Building **AI-powered** production apps
-
-### 🌱 Always learning
-- LLM integration in web apps
-- System design & scalability patterns
-- Competitive programming (daily grind 💪)
-
-</td>
-<td valign="top" width="50%">
-
-### ⚡ Quick Stats
+### 🔭 Currently (quick stats)
 
 | Category | Count |
 |----------|-------|
