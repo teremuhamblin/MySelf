@@ -7,8 +7,8 @@
 👤 Présentation
 </p>
 
-- Opérateur de renseignement au sein du Groupement des Commandos Parachutistes, je travaille dans l’ombre pour éclairer l’action. - Mon rôle repose sur la précision, la discrétion et la maîtrise de l’information en environnement exigeant.
-- Formé à l’engagement parachutiste et aux opérations en profondeur, j’évolue dans des contextes où l’autonomie, la lucidité et la rigueur sont non négociables.
+Opérateur de renseignement au sein du Groupement des Commandos Parachutistes, je travaille dans l’ombre pour éclairer l’action. Mon rôle repose sur la précision, la discrétion et la maîtrise de l’information en environnement exigeant.
+Formé à l’engagement parachutiste et aux opérations en profondeur, j’évolue dans des contextes où l’autonomie, la lucidité et la rigueur sont non négociables.
 
 ---
 
