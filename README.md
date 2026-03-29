@@ -8,7 +8,6 @@
 
 <br/>
 
-### @ themaddog.tmdg@protonmail.com
 ![Status](https://img.shields.io/badge/Status-ACTIF-%23ff6f61)
 </div>
 
