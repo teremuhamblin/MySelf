@@ -1,0 +1,24 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4CAF50"/>
+      <stop offset="100%" stop-color="#2196F3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Cercle extérieur -->
+  <circle cx="90" cy="90" r="80" fill="url(#grad)" opacity="0.15"/>
+
+  <!-- Icône stylisée -->
+  <path d="M90 40
+           C110 40 130 60 130 80
+           C130 110 90 140 90 140
+           C90 140 50 110 50 80
+           C50 60 70 40 90 40Z"
+        fill="url(#grad)"/>
+
+  <!-- Texte -->
+  <text x="90" y="165" font-size="22" font-family="Arial" fill="#333" text-anchor="middle">
+    MySelf
+  </text>
+</svg>
