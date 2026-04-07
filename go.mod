@@ -1,4 +1,4 @@
-module github.com/teremuhar/MySelf
+module github.com/teremuhamblin/MySelf
 
 go 1.22
 
