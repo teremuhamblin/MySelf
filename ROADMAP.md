@@ -292,3 +292,170 @@ Nouvelles commandes
 `
 
 ---
+
+🛣️ Roadmap MySelf — Version 1.3.0 (Dashboard Web + API REST)
+
+`md
+
+MySelf — Roadmap 1.3.0
+
+Dashboard Web + API REST
+
+🎯 Vision générale
+La version 1.3.0 étend MySelf au-delà de la ligne de commande.  
+Elle introduit :
+- une API REST pour accéder aux données et analyses,
+- un dashboard web moderne pour visualiser les informations,
+- une architecture plus propre et orientée services.
+
+Objectif : rendre MySelf consultable, navigable et exploitable depuis n’importe où.
+
+---
+
+🚀 Nouveautés principales de la version 1.3.0
+
+1. API REST (cmd/api/ + internal/api/)
+Création d’une API REST locale permettant d’exposer :
+- les records,
+- les statistiques,
+- les analyses,
+- les tendances,
+- les tags.
+
+Endpoints prévus
+- GET /records → liste des records  
+- GET /records/{id} → détail d’un record  
+- GET /stats → statistiques globales  
+- GET /trends → tendances temporelles  
+- GET /tags → liste des tags + fréquence  
+- POST /records → ajouter un record (optionnel pour 1.3.0)
+
+Structure proposée
+
+``` text
+`
+cmd/api/
+└── main.go
+
+internal/api/
+├── router.go
+├── handlers.go
+└── middleware.go
+`
+```
+
+1. Technologies
+- Go standard library ou Gin/Fiber (selon préférence)
+- JSON structuré
+- CORS activé pour le dashboard
+
+---
+
+2. Dashboard Web (web/dashboard/)
+Un tableau de bord web simple, moderne, statique ou dynamique.
+
+Fonctionnalités
+- Vue globale :
+  - nombre total d’entrées
+  - histogrammes par type
+  - tags les plus fréquents
+  - timeline des records
+- Vue détaillée :
+  - liste des records
+  - filtres (type, tags, période)
+  - affichage d’un record
+- Vue analyse :
+  - patterns détectés
+  - résumés automatiques
+  - évolution mensuelle
+
+Stack possible
+- Frontend minimal : HTML/CSS/JS + fetch API  
+- ou Svelte / React / Vue (selon ambition)  
+- Build statique servi par l’API ou via un serveur simple
+
+Structure proposée
+
+```text
+`
+web/dashboard/
+├── index.html
+├── assets/
+│   ├── styles.css
+│   └── charts.js
+└── js/
+    ├── api.js
+    ├── dashboard.js
+    └── charts.js
+`
+```
+
+---
+
+3. Service d’accès aux données (pkg/data/) — extension
+Amélioration du module introduit en 1.2.0.
+
+Nouvelles capacités
+- pagination
+- filtres avancés
+- agrégations pour le dashboard
+- cache mémoire (optionnel)
+
+---
+
+4. Refonte du module d’analyse pour API
+Adaptation du module internal/analysis/ pour être exposé via l’API.
+
+Ajouts
+- fonctions retournant des structures JSON prêtes à afficher
+- endpoints dédiés :
+  - /analysis/summary
+  - /analysis/patterns
+  - /analysis/monthly
+
+---
+
+5. Sécurité & configuration
+- fichier config.yaml ou variables d’environnement
+- port configurable
+- mode debug / production
+- logs HTTP
+
+---
+
+6. Qualité & outils
+- Tests API (handlers + intégration)
+- Tests du dashboard (lint + build)
+- Makefile enrichi :
+  - make api
+  - make dashboard
+  - make dev
+- Documentation :
+  - docs/api.md
+  - docs/dashboard-web.md
+
+---
+
+📌 Résumé des modifications entre 1.2.0 et 1.3.0
+
+| Domaine | 1.2.0 | 1.3.0 |
+|--------|--------|--------|
+| Analyse | CLI + module interne | API REST + dashboard web |
+| Dashboard | CLI | Web moderne |
+| Architecture | modulaire | orientée services (API + frontend) |
+| Stockage | structuré | accessible via API |
+| CLI | enrichie | complémentaire au dashboard |
+| Documentation | avancée | documentation API + web |
+
+---
+
+🏁 Livrables finaux pour 1.3.0
+- Serveur API REST fonctionnel
+- Dashboard web complet
+- Documentation API
+- Documentation dashboard
+- Tests API + build frontend
+- Nouvelle structure du dépôt
+`
+
+---
