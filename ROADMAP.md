@@ -120,3 +120,175 @@ Fournir un socle stable permettant :
 - Tests + linting.
 - Index des records.
 - CLI complète.
+
+---
+
+🛣️ Roadmap MySelf — Version 1.2.0 (Analyse + Dashboard)
+
+`md
+
+MySelf — Roadmap 1.2.0
+
+Analyse + Dashboard
+
+🎯 Vision générale
+La version 1.2.0 transforme MySelf d’un simple collecteur de données (1.0.0) et d’un système structuré (1.1.0) en un outil capable de comprendre, analyser et visualiser les informations personnelles collectées.
+
+Objectifs :
+- produire des analyses automatiques,
+- offrir une vue synthétique de soi,
+- permettre une navigation simple dans les données,
+- poser les bases d’un futur tableau de bord avancé (1.3+).
+
+---
+
+🚀 Nouveautés principales de la version 1.2.0
+
+1. Module d’analyse (internal/analysis/)
+Création d’un module dédié aux analyses automatiques.
+
+Fonctionnalités prévues
+- Statistiques globales :
+  - nombre total de records,
+  - records par type,
+  - records par période (jour/semaine/mois),
+  - tags les plus utilisés.
+- Détection de patterns simples :
+  - répétitions,
+  - pics d’activité,
+  - périodes creuses.
+- Génération d’un résumé automatique :
+  - “Top 3 des thèmes du mois”
+  - “Évolution du nombre d’entrées”
+  - “Types les plus fréquents”
+
+Structure proposée
+
+```text
+`
+internal/analysis/
+├── analyzer.go
+├── stats.go
+├── patterns.go
+└── summary.go
+`
+```
+
+---
+
+2. Dashboard CLI (cmd/dashboard/)
+Un tableau de bord en ligne de commande, simple mais puissant.
+
+Fonctionnalités
+- myself dashboard → vue synthétique
+- myself dashboard --month 2026-04 → vue mensuelle
+- myself dashboard --type emotion → vue filtrée
+- Affichage :
+  - histogrammes ASCII,
+  - tableaux,
+  - résumés textuels.
+
+Exemples d’affichage
+- Histogramme des types :
+
+``` schema
+  `
+  emotions   ████████████  42
+  habits     ████          12
+  events     ██████        18
+  notes      █████████     30
+  `
+```
+- Résumé :
+  `
+  Mois d’avril : 102 entrées
+  Thèmes dominants : stress, énergie, apprentissage
+  Journées les plus actives : 3, 12, 21
+  `
+
+---
+
+3. Réorganisation du stockage (records/)
+Pour permettre l’analyse efficace.
+
+Modifications
+- Structure par année/mois :
+
+``` text
+  `
+  records/
+  ├── 2026/
+  │   ├── 04/
+  │   │   ├── 2026-04-01.json
+  │   │   ├── 2026-04-02.json
+  │   │   └── ...
+  `
+```
+
+- Ajout d’un fichier records/index.json enrichi :
+  - ID
+  - type
+  - tags
+  - date
+  - chemin du fichier
+
+---
+
+4. API interne d’accès aux données (pkg/data/)
+Pour séparer la logique d’accès aux records.
+
+Fonctions clés
+- ListRecords()
+- GetRecordByID()
+- FilterByType()
+- FilterByDateRange()
+- GetStats()
+
+---
+
+5. Améliorations de la CLI collector
+Ajout de nouvelles commandes utiles pour l’analyse.
+
+Nouvelles commandes
+- myself stats
+- myself tags
+- myself trends
+- myself export --csv
+
+---
+
+6. Qualité & outils
+- Tests unitaires pour le module d’analyse.
+- Benchmarks simples (analyse sur 1000 records).
+- Ajout de make dashboard pour lancer le dashboard.
+- Documentation mise à jour :
+  - README
+  - structure.md
+  - docs/dashboard.md
+  - docs/analysis.md
+
+---
+
+📌 Résumé des modifications entre 1.1.0 et 1.2.0
+
+| Domaine | 1.1.0 | 1.2.0 |
+|--------|--------|--------|
+| Collecte | CLI modulaire | CLI enrichie (stats, trends) |
+| Stockage | index + structure | structure par date + index enrichi |
+| Analyse | aucune | module complet d’analyse |
+| Dashboard | aucun | dashboard CLI |
+| Architecture | modulaire | ajout analysis + data API |
+| Documentation | complète | documentation avancée |
+
+---
+
+🏁 Livrables finaux pour 1.2.0
+- Nouveau module analysis/
+- Nouveau dashboard CLI
+- Nouvelle structure records/
+- API interne pkg/data/
+- Documentation complète
+- Tests + benchmarks
+`
+
+---
