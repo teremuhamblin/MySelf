@@ -2,43 +2,68 @@ package profile
 
 import (
 	"errors"
-	"strings"
+	"time"
 )
 
-// Profile représente un ensemble d'informations personnelles
-// collectées et stockées dans MySelf.
-type Profile struct {
-	FullName string
-	Age      string
-	Email    string
-	City     string
-	Notes    string
+// Record est la structure centrale de MySelf.
+// Elle est utilisée par :
+// - le collecteur (A/B/C)
+// - l'analyse (1.2.0)
+// - l'API REST (1.3.0)
+// - le dashboard web (1.3.0)
+type Record struct {
+	ID        string    `json:"id"`
+	Type      string    `json:"type"`
+	Tags      []string  `json:"tags"`
+	Content   string    `json:"content"`
+	CreatedAt time.Time `json:"created_at"`
+	UpdatedAt time.Time `json:"updated_at"`
+	Version   string    `json:"version"` // version du format (utile pour 1.4.0)
 }
 
-// Clean normalise les champs (trim, espaces, etc.)
-func (p *Profile) Clean() {
-	p.FullName = strings.TrimSpace(p.FullName)
-	p.Age = strings.TrimSpace(p.Age)
-	p.Email = strings.TrimSpace(p.Email)
-	p.City = strings.TrimSpace(p.City)
-	p.Notes = strings.TrimSpace(p.Notes)
-}
+// NewRecord crée un record propre et complet.
+func NewRecord(id, rtype, content string, tags []string) Record {
+	now := time.Now()
 
-// Validate vérifie les champs essentiels.
-// Tu peux renforcer cette logique selon tes besoins.
-func (p *Profile) Validate() error {
-	if p.FullName == "" {
-		return errors.New("le nom complet est obligatoire")
+	return Record{
+		ID:        id,
+		Type:      rtype,
+		Tags:      tags,
+		Content:   content,
+		CreatedAt: now,
+		UpdatedAt: now,
+		Version:   "1.0",
 	}
-	if p.Email == "" {
-		return errors.New("l'email est obligatoire")
+}
+
+// Validate vérifie que le record est cohérent.
+func (r Record) Validate() error {
+	if r.ID == "" {
+		return errors.New("record ID cannot be empty")
+	}
+	if r.Type == "" {
+		return errors.New("record type cannot be empty")
+	}
+	if r.Content == "" {
+		return errors.New("record content cannot be empty")
 	}
 	return nil
 }
 
-// ToText génère une représentation textuelle propre,
-// utilisée pour l’écriture dans un fichier.
-func (p *Profile) ToText() string {
-	var b strings.Builder
+// UpdateContent modifie le contenu et met à jour la date.
+func (r *Record) UpdateContent(newContent string) {
+	r.Content = newContent
+	r.UpdatedAt = time.Now()
+}
 
-	b.WriteString("Nom complet : " + p.FullName + "\
+// UpdateTags remplace les tags et met à jour la date.
+func (r *Record) UpdateTags(tags []string) {
+	r.Tags = tags
+	r.UpdatedAt = time.Now()
+}
+
+// UpdateType change le type du record.
+func (r *Record) UpdateType(t string) {
+	r.Type = t
+	r.UpdatedAt = time.Now()
+}
