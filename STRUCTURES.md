@@ -188,4 +188,111 @@ Toute modification importante doit être :
 Quand une partie devient obsolète, elle est déplacée dans 7-archives/ plutôt que supprimée.
 
 ---
+`Voici la structure complète du projet MySelf en version 1.3.0, cohérente avec tout ce que nous avons construit :  
+collecteur → analyse → dashboard CLI → API REST → dashboard web.
+
+Format propre, professionnel, prêt à coller dans structure.md.
+
+---
+
+# Structures 1.3.0
+
+📁 Structure du projet — MySelf 1.3.0
+
+``` text
 `
+MySelf/
+├── cmd/
+│   ├── collector/
+│   │   └── main.go
+│   ├── dashboard/          # Dashboard CLI (1.2.0)
+│   │   └── main.go
+│   └── api/                # Serveur API REST (1.3.0)
+│       └── main.go
+│
+├── internal/
+│   ├── profile/            # Modèle de profil enrichi
+│   │   └── profile.go
+│   ├── collector/          # Logique du collecteur CLI
+│   │   └── collector.go
+│   ├── analysis/           # Module d’analyse (1.2.0 → étendu 1.3.0)
+│   │   ├── analyzer.go
+│   │   ├── stats.go
+│   │   ├── patterns.go
+│   │   └── summary.go
+│   └── api/                # API REST (1.3.0)
+│       ├── router.go
+│       ├── handlers.go
+│       └── middleware.go
+│
+├── pkg/
+│   └── data/               # Accès aux données (pagination, filtres, agrégations)
+│       ├── data.go
+│       ├── filters.go
+│       ├── pagination.go
+│       └── aggregations.go
+│
+├── web/
+│   └── dashboard/          # Dashboard Web (1.3.0)
+│       ├── index.html
+│       ├── assets/
+│       │   ├── styles.css
+│       │   └── charts.js
+│       └── js/
+│           ├── api.js
+│           ├── dashboard.js
+│           └── charts.js
+│
+├── records/                # Stockage structuré (année/mois)
+│   ├── index.json
+│   └── 2026/
+│       └── 04/
+│           ├── 2026-04-01.json
+│           ├── 2026-04-02.json
+│           └── ...
+│
+├── config.yaml             # Configuration API / dashboard / modes
+│
+├── docs/
+│   ├── api.md              # Documentation API REST
+│   ├── dashboard-web.md    # Documentation Dashboard Web
+│   ├── analysis.md         # Documentation analyse
+│   └── structure.md        # Structure du projet
+│
+├── Makefile                # Build API, dashboard, dev, lint, test
+├── go.mod
+└── CHANGELOG.md
+`
+```
+
+---
+
+🧭 Résumé des évolutions apportées en 1.3.0
+
+🆕 Nouveaux dossiers
+- cmd/api/ → serveur API REST  
+- internal/api/ → router, handlers, middleware  
+- web/dashboard/ → dashboard web complet  
+
+🔧 Dossiers étendus
+- internal/analysis/ → formats JSON pour API  
+- pkg/data/ → pagination, filtres, agrégations  
+
+📚 Documentation
+- docs/api.md  
+- docs/dashboard-web.md  
+
+⚙️ Configuration
+- config.yaml → ports, modes, options API  
+
+---
+
+🎯 Structure prête pour la milestone 1.3.0
+
+Cette structure est exactement celle attendue pour la release 1.3.0 :  
+- API REST opérationnelle  
+- Dashboard web complet  
+- Analyse exposée via API  
+- Architecture modulaire et scalable  
+
+---
