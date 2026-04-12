@@ -12,39 +12,35 @@
 
 ### 👨‍💻 About Me
 
-![Status](https://img.shields.io/badge/Status-ON-blue)
-![Status](https://img.shields.io/badge/Niveau-Novice-brightgreen)
+![Status](https://img.shields.io/badge/Status-On-purple)
+![Status](https://img.shields.io/badge/Niveau-Master-purple)
 ![Status](https://img.shields.io/badge/Stable-On-purple)
 
 ✅ Version “The MadDoG.tmdg”(Dev, rens)
 
-<div align="center">
-
-<img src="web/dashboard/assets/logo.svg" width="160" alt="MySelf Logo"/>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0f0f,50:1a1a1a,100:0f3460&height=200&section=header&text=DOSSIER+OPÉRATIONNEL&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=TheMadDoG.tmdg+-+Infanterie+Parachutiste+%7C+Renseignement+%7C+Ingénierie+Systèmes&descAlignY=58&descColor=a8b2d8&animation=fadeIn" width="100%"/>
+<img src="https://capsule render.vercel.app/api?type=waving&color=0:0f0f0f,50:1a1a1a,100:0f3460&height=200&section=header&text=DOSSIER+OPÉRATIONNEL&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=TheMadDoG.tmdg+-+Infanterie+Parachutiste+%7C+Renseignement+%7C+Ingénierie+Systèmes&descAlignY=58&descColor=a8b2d8&animation=fadeIn" width="100%"/>
 
 <br/>
-
 ! Status
 ! Discipline
 ! Focus
 
 </div>
+</p>
 
 ---
 
- # 🪂 SECTION 1 — IDENTITÉ OPÉRATIONNELLE
+# 🪂 SECTION 1
+- IDENTITÉ OPÉRATIONNELLE
 
-> Classification : INTERNE / TECHNIQUE / NON‑SENSIBLE  
-> Diffusion : Restreinte au périmètre GitHub
-
-```text
-IDENTIFIANT     : "The MadDoG.tmdg"
-BRANCHE         : Infanterie Parachutiste
-UNITÉ           : 11e Brigade Parachutiste — 2e Régiment Étranger de Parachutistes 
-SPÉCIALITÉ      :  Renseignement 
-COMPÉTENCES     : Spécialiste GCP du combat en ingénierie Systèmes | Développement opérationnel | Analyse Structurée
+> Classification : INTERNE / TECHNIQUE
+> Diffusion : GITHUB
+```rst
+IDENTIFIANT : "The MadDoG.tmdg"
+ARME : Armée de terre 
+UNITÉ : TAP
+SPÉCIALITÉ : INFTAP
+COMPÉTENCES : Opération du GCM
 ```
 
 - Profil orienté terrain, analyse, ingénierie, automatisation, avec une approche méthodique, disciplinée, orientée mission.
