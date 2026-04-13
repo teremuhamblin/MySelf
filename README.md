@@ -78,7 +78,7 @@ Règles :
 >Voici une structure propre, modulaire :
 
 ```text
-README/
+MySelf/
  ├── core/
  │    ├── identity.rst
  │    ├── doctrine.rst
