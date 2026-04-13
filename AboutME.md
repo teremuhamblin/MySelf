@@ -1,3 +1,5 @@
+##### 👨‍💻 AboutME.md - markdown 
+
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=200&section=header&text=TheMadDoG.tmdg&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=Opérateur,+Renseignement,+Spécialiste&descAlignY=58&descColor=a8b2d8&animation=fadeIn" width="100%"/>
@@ -8,10 +10,8 @@
 
 <br/>
 
-![Status](https://img.shields.io/badge/Status-ACTIF-%23ff6f61)
+![Status](https://img.shields.io/badge/Status-ACTIF-00f0ff)
 </div>
-
-### 👨‍💻 About Me
 
 ```typescript
   PSEUDO       : "The MadDoG.tmdg"
