@@ -1,4 +1,4 @@
-##### MySelf.md — markdown
+##### README.md — markdown
 >Projet personnel structuré
 - Objectif : créer un système personnel qui t’aide à clarifier, organiser, mesurer et améliorer ta vie quotidienne, sans psychologie de comptoir, juste du concret, du structuré, du discipliné.
 
