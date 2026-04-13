@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Support MySelf
+    url: https://github.com/TheMadDoG/MySelf/discussions
+    about: Pose tes questions, partage tes idées ou discute des évolutions du projet.
+
+  - name: Proposer une amélioration
+    url: https://github.com/TheMadDoG/MySelf/discussions/categories/ideas
+    about: Pour suggérer une fonctionnalité ou une amélioration du système MySelf.
+
+  - name: Signaler un problème de sécurité
+    url: https://github.com/TheMadDoG/MySelf/security/advisories
+    about: Merci de signaler ici toute vulnérabilité potentielle liée au projet.
