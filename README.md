@@ -8,8 +8,8 @@
 >Ton projet MySelf `doit reposer sur 4 piliers` :
 
 1. Identité
-Ce que tu es, ce que tu `veux être`, ce que tu `refuses d’être`.  
-Un fichier simple :
+- Ce que tu es, ce que tu `veux être`, ce que tu `refuses d’être`.  
+- Un fichier simple :
 
 ```text
 identity.rst
@@ -21,7 +21,7 @@ identity.rst
 ```
 
 2. Objectifs
-Pas des vœux pieux. `Des objectifs mesurables, datés, réalistes`.
+- Pas des vœux pieux. `Des objectifs mesurables, datés, réalistes`.
 
 ```text
 goals/
@@ -31,8 +31,8 @@ goals/
 ````
 
 3. Routines
-`Les routines` sont la colonne vertébrale du projet.  
-Tu peux les classer par domaine :
+- `Les routines` sont la colonne vertébrale du projet.  
+- Tu peux les classer par domaine :
 
 ```text
 routines/
@@ -44,7 +44,7 @@ routines/
 ```
 
 4. Suivi
-Un système simple pour `mesurer tes progrès`.
+- Un système simple pour `mesurer tes progrès`.
 
 ```text
 tracking/
@@ -119,10 +119,10 @@ MySelf/
 - Outils  
 
 3. Donner la philosophie
-Courte, efficace, cohérente avec ton style.
+- Courte, efficace, cohérente avec ton style.
 
 4. Donner la roadmap
-Exemple :
+- Exemple :
 
 | Version | Objectif | Statut |
 |--------|----------|--------|
