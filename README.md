@@ -95,7 +95,7 @@ MySelf/
  ├── tracking/
  │    ├── discipline.log
  │    ├── health.log
- │    └── progress.md
+ │    └── progress.rst
  ├── tools/
  │    ├── templates/
  │    └── scripts/ (optionnel)
