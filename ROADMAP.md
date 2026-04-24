@@ -1,4 +1,7 @@
- # 🗺️ Roadmap — MySelf
+# 🗺️ Roadmap — MySelf
+
+Version v0.1 — Initialisation 
+==============================
 
 Cette roadmap présente les étapes clés du développement du système MySelf.
 
@@ -30,3 +33,52 @@ Cette roadmap présente les étapes clés du développement du système MySelf.
 - Système complet et cohérent
 - Documentation finalisée
 - Routines et objectifs opérationnels
+
+Version v1.1 — Advanced System Layer
+====================================
+
+Objectif
+--------
+
+Renforcer l’automatisation, la cohérence interne et la capacité du système
+à guider l’utilisateur au quotidien.
+
+Nouveautés prévues
+------------------
+
+1. Ajout d’un module "Mindset"
+   - Valeurs personnelles
+   - Anti-objectifs (ce que j'évite)
+   - Principes de décision
+
+2. Ajout d’un module "Energy Management"
+   - Système de gestion de l’énergie
+   - Déclencheurs positifs / négatifs
+   - Rituels de récupération
+
+3. Ajout d’un module "Focus"
+   - Méthode de travail (25/5, deep work)
+   - Règles anti-distraction
+   - Priorisation avancée
+
+4. Ajout d’un module "Life Areas"
+   - Santé
+   - Travail
+   - Relations
+   - Finance
+   - Développement personnel
+
+5. Amélioration du tracking
+   - Ajout d’un fichier ``tracking/habits.rst``
+   - Système de score hebdomadaire
+   - Visualisation simple (ASCII)
+
+6. Ajout d’un fichier ``dashboard.rst`` (vue globale)
+
+Livrables
+---------
+
+- Nouveaux fichiers dans ``core/`` et ``tracking/``
+- Mise à jour du ``index.rst``
+- Documentation enrichie
+- Tag Git : ``v1.1``
