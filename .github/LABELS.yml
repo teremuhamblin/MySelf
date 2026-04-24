@@ -1,0 +1,8 @@
+- name: bug
+  color: ff0000
+- name: enhancement
+  color: 00ff00
+- name: improvement
+  color: 0000ff
+- name: question
+  color: ffff00
