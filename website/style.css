@@ -4,6 +4,8 @@
     --header-bg: #111;
     --header-text: #fff;
     --accent: #007bff;
+    --footer-bg: #222;
+    --footer-text: #ccc;
 }
 
 [data-theme="dark"] {
@@ -12,6 +14,8 @@
     --header-bg: #000;
     --header-text: #fff;
     --accent: #4da3ff;
+    --footer-bg: #000;
+    --footer-text: #777;
 }
 
 * {
@@ -27,6 +31,7 @@ body {
     transition: background .3s, color .3s;
 }
 
+/* HEADER */
 header {
     background: var(--header-bg);
     color: var(--header-text);
@@ -40,21 +45,45 @@ header .logo {
     height: 40px;
 }
 
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
 nav a {
     color: var(--header-text);
-    margin-left: 1rem;
     text-decoration: none;
     font-weight: 500;
+    padding: .3rem .6rem;
+    border-radius: 4px;
+    transition: background .2s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background: rgba(255,255,255,0.1);
 }
 
+nav a.active {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* MAIN */
 main {
     padding: 2rem;
+    min-height: 60vh;
 }
 
+/* FOOTER */
+.site-footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* THEME BUTTON */
 button.theme-toggle {
     background: none;
     border: 1px solid var(--header-text);
@@ -64,10 +93,10 @@ button.theme-toggle {
     cursor: pointer;
 }
 
+/* RESPONSIVE */
 @media (max-width: 700px) {
     nav {
-        display: flex;
         flex-wrap: wrap;
-        gap: .5rem;
+        justify-content: center;
     }
 }
