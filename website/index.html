@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil – Website</title>
+
+    <!-- CSS PRINCIPAL -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HEADER DIRECTEMENT INCLUS (issu du 2e fichier) -->
-<header>
-    <img src="assets/logo.svg" alt="Logo" class="logo">
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="pages/identity.html">Identité</a>
-        <a href="pages/doctrine.html">Doctrine</a>
-        <a href="pages/routines.html">Routines</a>
-        <a href="pages/goals.html">Objectifs</a>
-        <a href="pages/tracking.html">Tracking</a>
-        <a href="pages/dashboard.html">Dashboard</a>
-    </nav>
-</header>
-
-<!-- LAYOUT DYNAMIQUE (issu du 1er fichier) -->
+<!-- ===========================
+     HEADER INJECTÉ PAR script.js
+=========================== -->
 <div id="layout"></div>
 
-<main>
-    <h1>Bienvenue</h1>
-    <p>Choisissez une section dans le menu pour commencer.</p>
+<!-- ===========================
+     CONTENU PRINCIPAL
+=========================== -->
+<main class="main-content">
+    <section class="hero">
+        <h1>Bienvenue</h1>
+        <p>Choisissez une section dans le menu pour commencer.</p>
+    </section>
 </main>
 
+<!-- ===========================
+     SCRIPTS
+=========================== -->
 <script src="script.js"></script>
+
 </body>
 </html>
