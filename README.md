@@ -133,4 +133,20 @@ MySelf/
 
 ---
 
+# 🚀 GitHub Package Publisher – Docker Edition
+
+Ce projet publie automatiquement une image Docker dans GitHub Packages (GHCR).
+
+## 📦 Package généré
+Une image Docker est publiée ici :
+- ghcr.io/<TON-USERNAME>/github-package-publisher:latest
+
+## 🔧 Fonctionnement
+À chaque push sur `main`, GitHub Actions :
+1. construit l’image Docker  
+2. la tag  
+3. la publie dans GitHub Packages  
+
+## ⭐ Laisse une étoile si ce projet t’aide !
+
 ##### 🔥 a Suivre ...
