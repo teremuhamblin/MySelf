@@ -38,3 +38,9 @@
 </table>
 
 ---
+# 👤 Auteur
+> The MadDoG.tmdg 
+- Project Manager & Technical Lead  
+- Créateur de Assistant‑IA
+
+---
