@@ -23,6 +23,11 @@ website/
 ├── index.html
 ├── style.css
 ├── script.js
+│
+├── components/
+│   ├── header.html
+│   └── footer.html
+│
 ├── pages/
 │   ├── identity.html
 │   ├── doctrine.html
@@ -30,8 +35,21 @@ website/
 │   ├── goals.html
 │   ├── tracking.html
 │   └── dashboard.html
-└── assets/
-    └── logo.svg
+│
+├── assets/
+│   ├── logo.svg
+│   ├── icons/
+│   ├── images/
+│   └── fonts/
+│
+└── css/
+    ├── reset.css
+    ├── variables.css
+    ├── layout.css
+    ├── components.css
+    └── pages.css
 ```
 
 ---
+
+
