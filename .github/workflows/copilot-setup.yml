@@ -1,0 +1,63 @@
+name: Copilot Setup & Integrity Check
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  copilot-setup:
+    name: Validate MySelf Structure
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install rst lint tools
+        run: |
+          pip install docutils rstcheck
+
+      - name: Validate .rst files
+        run: |
+          echo "🔍 Checking RST files..."
+          find . -name "*.rst" -print0 | xargs -0 -I {} rstcheck {}
+
+      - name: Check repository structure
+        run: |
+          echo "📁 Validating MySelf structure..."
+          REQUIRED_DIRS=("core" "goals" "routines" "tracking" "tools")
+          for DIR in "${REQUIRED_DIRS[@]}"; do
+            if [ ! -d "$DIR" ]; then
+              echo "❌ Missing directory: $DIR"
+              exit 1
+            else
+              echo "✔️ Found: $DIR"
+            fi
+          done
+
+      - name: Check README presence
+        run: |
+          if [ ! -f "README.md" ]; then
+            echo "❌ README.md is missing"
+            exit 1
+          else
+            echo "✔️ README.md OK"
+          fi
+
+      - name: Basic Markdown lint
+        uses: avto-dev/markdown-lint@v1
+        with:
+          config: ".markdownlint.json"
+        continue-on-error: true
+
+      - name: Summary
+        run: |
+          echo "🎉 Copilot Setup Completed Successfully"
